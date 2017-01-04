@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:dnSpy.dnpatch"
              xmlns:mvvm="clr-namespace:dnSpy.Contracts.MVVM;assembly=dnSpy.Contracts.DnSpy"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="400">
     <!-- InitDataTemplateAP.Initialize will initialize the context menu to prevent the default
          tool window context menu from showing. -->
     <Grid
@@ -14,22 +14,20 @@
         Background="Transparent" Margin="0,0,-522,0"
         >
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
         </Grid.ColumnDefinitions>
-        <ListView x:Name="listView" Grid.Column="1" HorizontalAlignment="Left" Height="275" Margin="10,12,0,-282" Grid.Row="3" VerticalAlignment="Top" Width="802">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="200" Margin="0,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path}"  Header="Path" Width="200"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Method}"  Header="Method" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Instructions}"  Header="Instructions" Width="150"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Indices}"  Header="Indices" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path}"  Header="Path" Width="500"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Method}"  Header="Method" Width="500"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Instructions}"  Header="Instructions" Width="500"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Indices}"  Header="Indices" Width="Auto"/>
                 </GridView>
             </ListView.View>
         </ListView>
